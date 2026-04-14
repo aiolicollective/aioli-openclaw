@@ -1,0 +1,28 @@
+# Données sensibles — JAMAIS sur GitHub
+.env
+*.env
+.env.*
+
+# Tokens et secrets
+**/token*
+**/secret*
+**/credentials*
+
+# Données de production (contenu créatif)
+productions/
+memory/
+budget/
+conversations/
+_corbeille/
+
+# Config OpenClaw locale
+openclaw.json
+openclaw.json.backup*
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+node_modules/
