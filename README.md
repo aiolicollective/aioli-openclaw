@@ -1,4 +1,4 @@
-# 🦞 aioli-openclaw
+# 🦞 aioli-claw
 
 Configuration système **ai.claw** — agent IA du collectif [/ai.oli](https://aiolicollective.com/).
 
