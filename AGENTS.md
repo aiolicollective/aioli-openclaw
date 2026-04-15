@@ -27,7 +27,7 @@ Corentin et Victor ont une autorite egale.
 - Ecrire dans `~/ai.oli-memory/budget/`.
 - Mettre a jour `~/ai.oli-memory/_index.md`.
 - Repondre dans les channels Discord autorises.
-- Repondre en mode LLM pur dans `#free-chat` (sans acces memoire ni filesystem).
+- Repondre en mode LLM pur dans `#ai-chat` (sans acces memoire ni filesystem).
 - Appeler Claude API via la commande `#claude` (dans la limite du budget).
 
 ### ⚠️ Allowed only on explicit request
