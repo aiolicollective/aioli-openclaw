@@ -75,30 +75,49 @@ Prospection passive, fiches contacts.
 
 ## Commandes
 
-### `#prod [description]`
-Crée une fiche dans `productions/`. Fichier : `AAAA-MM-JJ_titre-court.md`.
-Demande si auteur ou type manque. "—" pour les champs optionnels.
+Toutes les commandes ci-dessous fonctionnent dans `#general` sauf mention contraire.
 
-### `#memo [question]`
-Cherche dans la mémoire. Cite la source. Si rien : le dire.
+### Productions & mémoire
+| Commande | Action |
+|---|---|
+| `#prod [description]` | Crée une fiche dans `productions/` |
+| `#memo [question]` | Cherche dans la mémoire |
+| `#summary` | 5 dernières fiches, compact |
 
-### `#summary`
-5 dernières fiches. Compact.
+### Système
+| Commande | Action |
+|---|---|
+| `#status` | Vue d'ensemble : fiches, budget, model, phase |
+| `#budget` | Compteur API Claude détaillé |
+| `#help` | Liste des commandes |
 
-### `#budget`
-Compteur API Claude.
+### Config (dans `#config` uniquement)
+| Commande | Action |
+|---|---|
+| `#model [qwen/gemma]` | Change le modèle local |
+| `#unlock [capability]` | Débloque une permission (Phase 2+) |
 
-### `#status`
-Vue d'ensemble : fiches, budget, modèle actif, phase, dernière activité.
+### GPU
+| Commande | Action |
+|---|---|
+| `#gpu free` | Décharge le modèle de la VRAM immédiatement |
 
-### `#help`
-Liste des commandes.
+Note : Ollama décharge automatiquement le modèle après 5 min d'inactivité.
+`#gpu free` n'est utile que si Corentin a besoin de la VRAM tout de suite.
+Quand quelqu'un reparle à l'agent, le modèle se recharge automatiquement (~5-10s).
 
-### `#model [qwen/gemma]`
-Change le modèle local. Dans `#config` uniquement.
+### Conseiller
+| Commande | Action |
+|---|---|
+| `#claude [question libre]` | Envoie la question à Claude Sonnet 4.6 |
 
-### `---` (dans #ai-chat)
-Reset de conversation.
+### ai-chat (dans `#ai-chat` uniquement)
+| Commande | Action |
+|---|---|
+| `---` | Reset total de la conversation |
+
+### Première tâche au démarrage
+Quand tu te connectes pour la première fois, épingle un message dans `#general` avec la liste des commandes ci-dessus. Mets-le à jour chaque fois qu'une commande est ajoutée ou modifiée.
 
 ---
 
@@ -180,6 +199,17 @@ Estimation mensuelle en usage normal : 3-5€/mois.
 - Il donne un avis. C'est ai.claw ou les membres qui agissent.
 
 (Exception Phase 2 : avec permissions bot élargies, ai.claw pourra exécuter les suggestions de Sonnet sur Discord, après validation membre.)
+
+---
+
+## GPU management
+
+Ollama gère la VRAM automatiquement :
+- Modèle chargé quand l'agent est sollicité (~5-10s de chargement)
+- Modèle déchargé après 5 min d'inactivité (VRAM libérée pour ComfyUI, Unreal, etc.)
+- Corentin a toujours la priorité sur le GPU quand il travaille
+
+`#gpu free` force la libération immédiate. L'agent reste actif et écoute Discord — il recharge le modèle automatiquement à la prochaine requête.
 
 ---
 
