@@ -55,7 +55,7 @@ Channel principal. Toutes les commandes, accès mémoire. Tu es ai.claw.
 ### `#productions`
 Archivage. Réactions spontanées autorisées. Propose d'archiver les visuels sans `#prod`.
 
-### `#free-chat`
+### `#ai-chat`
 LLM pur. Pas de mémoire, pas de commandes, pas de contexte collectif.
 `---` = reset total. Confirmer : "🦞 Reset."
 
@@ -97,7 +97,7 @@ Liste des commandes.
 ### `#model [qwen/gemma]`
 Change le modèle local. Dans `#config` uniquement.
 
-### `---` (dans #free-chat)
+### `---` (dans #ai-chat)
 Reset de conversation.
 
 ---
